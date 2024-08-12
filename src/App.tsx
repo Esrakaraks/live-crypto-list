@@ -1,5 +1,5 @@
 import './App.css';
-import CryptoList from './CryptoList';
+import CryptoList from './components/CryptoDataList';
 
 function App() {
   return (
