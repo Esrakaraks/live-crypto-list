@@ -1,7 +1,17 @@
 import { useQuery } from '@tanstack/react-query';
-import { TypeCryptoData } from './typeCryptoData';
-import { getCryptoDataAPI } from './apiurls';
+import { TypeCryptoData } from './TypeCryptoData';
+import { getCryptoDataAPI } from './ApiUrl';
 
+/**
+ * A custom hook to fetch cryptocurrency data using React Query.
+ * @param {number} page - The current page number for pagination.
+ * @param {number} perPage - The number of items to fetch per page.
+ * @returns {object} - The result of the query, which includes data, status, and error if any.
+ *
+ * @property {TypeCryptoData[]} data - The array of cryptocurrency data.
+ * @example
+ * const { data, status, error } = UseFetchCryptoData(1, 50);
+ */
 
 const UseFetchCryptoData = (page: number, perPage: number) => {
   
@@ -13,9 +23,9 @@ const UseFetchCryptoData = (page: number, perPage: number) => {
             const response = await fetch(getCryptoDataAPI(page, perPage));
             return response.json();
           } catch (error) {
-            console.log('errorrr', error);
+            console.log('error', error);
+            throw error;
           }
-          
         },
       });
 };

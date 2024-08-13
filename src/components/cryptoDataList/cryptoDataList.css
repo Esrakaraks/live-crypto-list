@@ -1,0 +1,74 @@
+body {
+    height: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cryptolist-container {
+    border: 1px solid rgb(249, 249, 249);
+    border-spacing: 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+
+    th {
+        padding: 8px 40px 8px 40px;
+        font-size: 10px;
+    }
+    
+    td {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+    
+    th:first-child, 
+    td:first-child {
+        padding: 8px 180px 8px 10px;
+        text-align: left;
+    }
+}
+
+.cryptolist-head {
+    font-weight: bold;
+    background-color: rgb(249, 249, 249);
+    color: #c1bdbd;
+}
+
+.crypto-column-container,
+.crypto-column-symbol {
+    display: flex;
+}
+
+.crypto-column-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.crypto-column-image {
+    width: 22px;
+    height: 22px; 
+    margin-right: 8px;
+}
+
+.usdt-text {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.pagination-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+}
+
+.pagination-prev,
+.pagination-next {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.pagination-page {
+    align-self: center;
+}

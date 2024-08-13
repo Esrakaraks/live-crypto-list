@@ -1,10 +1,9 @@
-import './App.css';
-import CryptoList from './components/CryptoDataList';
+import CryptoList from './components/cryptoDataList/CryptoDataList';
 
 function App() {
   return (
     <div className="App">
-     <CryptoList/>
+      <CryptoList/>
     </div>
   );
 }
