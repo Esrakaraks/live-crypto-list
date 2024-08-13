@@ -31,7 +31,7 @@ const columns = [
   columnHelper.accessor('current_price', {
     cell: info => (
     <>
-      {info.getValue()} <span className='usdt-text' style={{fontSize: '10px'}}>USDT</span>
+      {info.getValue()} <span className='usdt-text' style={{fontSize: '9px'}}>USDT</span>
     </>
     ),
     header: () => 'Price',
@@ -40,7 +40,7 @@ const columns = [
   columnHelper.accessor('market_cap', {
     cell: info => (
       <>
-        {info.getValue()} <span className='usdt-text' style={{fontSize: '10px'}}>USDT</span>
+        {info.getValue()} <span className='usdt-text' style={{fontSize: '9px'}}>USDT</span>
       </>
       ),
     header: () => 'Market Value',
@@ -49,19 +49,21 @@ const columns = [
   columnHelper.accessor('price_change_percentage_24h', {
     cell: info => {
       const priceValue = info.getValue();
+      const displayValue = priceValue < 0 ? priceValue.toString().replace('-', '') : priceValue;
       const color = priceValue < 0 ? 'red' : priceValue > 0 ? 'green' : '#777676';
       const Icon = priceValue < 0 ? GoArrowDownRight : priceValue > 0 ? MdArrowOutward : null;
 
-    return (
-      <span style={{ color, fontWeight: '600'}}>
-        {Icon && <Icon />}
-        {priceValue.toFixed(2)}%
-      </span>
-    );
+      return (
+        <span style={{ color, fontWeight: '600' }}>
+          {Icon && <Icon />}
+          {Number(displayValue).toFixed(2)}%
+        </span>
+      );
     },
     header: () => '24h Change',
   }),
 
+  // to get the last 24 data, get the last 24 items
   columnHelper.accessor('sparkline_in_7d', {
     cell: info => {
       const sparklineData = info.getValue()?.price.slice(-24);

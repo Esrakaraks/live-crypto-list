@@ -4,7 +4,7 @@
  * @property {number[]} price - Array of prices over the last 7 days.
  */
 interface Sparklinein7d {
-  price: number[];
+  price: number[]; // to get the last 24h, get the last 24 items
 }
 
 
@@ -17,7 +17,7 @@ interface Sparklinein7d {
  * @property {number} current_price - The current price of the cryptocurrency.
  * @property {number} market_cap - The market capitalization of the cryptocurrency.
  * @property {number} price_change_percentage_24h - The percentage change in price over the last 24 hours.
- * @property {Sparklinein7d} sparkline_in_7d - The sparkline data for the last 7 days.
+ * @property {Sparklinein7d} sparkline_in_7d - The sparkline data for the last 7 days.(to get the last 24h, get the last 24 items)
  */
 export type TypeCryptoData = {
   id: string;

@@ -1,8 +1,9 @@
 body {
-    height: 100%;
     margin: 20px 0;
     display: flex;
-    justify-content: center;
+    @media (min-width: 767px) {
+        justify-content: center;
+    }
 }
 
 .cryptolist-container {
@@ -19,6 +20,7 @@ body {
     td {
         font-size: 12px;
         font-weight: 600;
+        text-align: center;
         color: var(--secondary-color);
     }
     
@@ -59,7 +61,7 @@ body {
 .pagination-container {
     margin-top: 10px;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     font-weight: 500;
 }
 

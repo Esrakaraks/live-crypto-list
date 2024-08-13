@@ -10,7 +10,7 @@ import { getCryptoDataAPI } from './ApiUrl';
  *
  * @property {TypeCryptoData[]} data - The array of cryptocurrency data.
  * @example
- * const { data, status, error } = UseFetchCryptoData(1, 50);
+ * const { data, status, error } = UseFetchCryptoData(1, 10);
  */
 
 const UseFetchCryptoData = (page: number, perPage: number) => {
