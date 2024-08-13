@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { TypeCryptoData } from './TypeCryptoData';
+import { TypeCryptoData } from './typeCryptoData';
 import { getCryptoDataAPI } from './ApiUrl';
 
 /**

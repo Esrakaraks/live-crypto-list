@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Sparklines, SparklinesLine } from 'react-sparklines';
 import {useReactTable,createColumnHelper,flexRender,getCoreRowModel} from '@tanstack/react-table';
 import UseFetchCryptoData from '../../api/UseFetchCryptoData';
-import { TypeCryptoData } from '../../api/TypeCryptoData';
+import { TypeCryptoData } from '../../api/typeCryptoData';
 import { MdArrowOutward } from 'react-icons/md';
 import { GoArrowDownRight } from 'react-icons/go';
 import { MdKeyboardArrowLeft } from "react-icons/md";
