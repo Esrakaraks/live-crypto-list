@@ -19,7 +19,7 @@ const columns = [
         <div className='crypto-column-container'>
           <img src={image} alt={name} className='crypto-column-image' />
           <div>
-            <div className='crypto-column-symbol'>{symbol.toUpperCase()}<div className='usdt-text'>/ USDT</div></div>
+            <div className='crypto-column-symbol'>{symbol.toUpperCase()}<div className='usdt-text'>/USDT</div></div>
             <div className='crypto-column-name'>{name}</div>
           </div>
         </div>
